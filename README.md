@@ -4,15 +4,15 @@ This repo contains my Solidity and ethers.js practice projects as part of my Web
 
 ### Contracts Included
 
-# 1. Counter.sol
+### 1. Counter.sol
 - Functions: `increment()`, `decrement()`, `getCount()`
 - Features: basic `uint` counter with validation using `require`
 
-# 2. TodoList.sol
+### 2. TodoList.sol
 - Features: an array of `Todo` structs with `string` task and `bool` completed
 - Functions: add todo, mark as complete, get list
 
-# 3. SimpleWallet.sol
+### 3. SimpleWallet.sol
 - Functions: `deposit()`, `withdraw(address, uint)`, `getBalance()`
 - Features: onlyOwner access to withdraw, payable functions
 
