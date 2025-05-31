@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TodoList Smart Contract - Frontend</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--JS in other folder-->
+    <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="js/app.js" defer></script>
+    <!--Customized CSS Template-->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-md-12">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <!--This is where the directions will be, with id = div-home-->
+                <div class="content-wrapper" id="div-home">
+                    <h1 class="text-center">TodoList Smart Contract - Template</h1>
+                    <p class="mt-4">
+                        Connect your MetaMask Wallet to use TodoList Contract
+                    </p>
+                </div>
+
+                <div class="mb-1">
+                    <button id="connect" class="btn btn-primary">Connect Wallet</button>
+                    <span id="walletAddress" class="ms-2 text-muted"></span>
+                </div>
+
+                <div class="mb-3">
+                    <button id="getOwner" class="btn btn-info">Wallet Address</button>
+                    <p id="ownerDisplay" class="mt-2 text-muted"></p>
+                </div>
+                <br><br><br>
+                <button id="getTaskCount" class="btn btn-hidden" onclick="getCount()"></button>
+                <p id="taskCountDisplay" class="mt-2 text-muted"></p>
+                <div class="mb-3">
+                    <label for="text-addTask" class="form-label">Add New Task</label>
+                    <input type="text" class="form-control" id="text-addTask" placeholder="Write Task 'input-string'">
+                </div>
+
+                <div class="mb-3">
+                    <button id="addTask" class="btn btn-primary">Add a Task</button>
+                    <button id="markComplete" class="btn btn-success">Complete Task</button>
+                    
+                    <br><br><br>
+
+                        <div class="mb-3">
+                            <label for="text-addTask" class="form-label"></label>
+                            <input type="text" class="form-control" id="text-getTask" placeholder="Write Task or TaskID to Return Task Information 'input-string||uint'">
+                        </div>
+                    <button id="getTask" class="btn btn-secondary">Get Task Information</button>
+                </div>
+        <div id="status" class="text-info mt-3"></div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+
+</html>

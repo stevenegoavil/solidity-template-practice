@@ -2,12 +2,18 @@
 pragma solidity >= 0.4.22 < 0.9.0;
 
 contract TodoList {
+    address public owner;
+
     struct Todo {
         string task;
         bool completed;
     }
 
     Todo[] public todos;
+
+    constructor() {
+        owner = msg.sender;
+    }
 
     function addTask(string memory _task) public {
         todos.push(Todo(_task, false));
