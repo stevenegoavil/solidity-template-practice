@@ -5,26 +5,49 @@ This repo contains my Solidity and ethers.js practice projects as part of my Web
 ### Contracts Included
 
 ### 1. Counter.sol
-- Functions: `increment()`, `decrement()`, `getCount()`
-- Features: basic `uint` counter with validation using `require`
+- Contract: `Counter.sol`
+- Functions: `increment()`, `decrement()`, `getCount()` *(or public `count`)*
+- Frontend: Real-time UI for count interaction
+- Notes: Shows `require()` for input validation
 
 ### 2. TodoList.sol
-- Features: an array of `Todo` structs with `string` task and `bool` completed
-- Functions: add todo, mark as complete, get list
+- Contract: `TodoList.sol`
+- Functions: `addTask(string)`, `getTask(uint)`, `markCompleted(uint)`, `getTaskCount()`
+- Frontend: Add/view/complete todos, input + task info feedback
+- Features: Array of structs (`string`, `bool`), public `owner`
 
 ### 3. SimpleWallet.sol
-- Functions: `deposit()`, `withdraw(address, uint)`, `getBalance()`
-- Features: onlyOwner access to withdraw, payable functions
+- Contract: `SimpleWallet.sol`
+- Functions: `deposit()`, `withdraw(uint)`, `getBalance()`, `owner()`
+- Frontend: Deposit/withdraw ETH, show connected wallet + balance
+- Features: Access control via `msg.sender == owner`, uses payable functions
 
+## How to Use (Local Hardhat Setup)
+
+1. **Start Hardhat node** (in one terminal):
+```bash
+npx hardhat node
+2. **Deploy any Contract (in a second Terminal):
+npx hardhat run scripts/deployCounter.js --network localhost
+npx hardhat run scripts/deployTodoList.js --network localhost
+npx hardhat run scripts/deployWallet.js --network localhost
+3. **Update each frontend's app.js with the contract address from the delpoy step
+const contractAddress = "0x..."; // copy from deploy output
+4. **Open the HTML file in browser(I used Live Sever extention to execute MetaMask)
+5. **Connect MetaMask to localhost: 8545 and interact: Success!
 ###  Tools Used
 - Solidity ^0.8.x
 - Hardhat
 - Ethers.js
 - JavaScript for deployment and interaction scripts
+- MetaMask
+- Bootstrap
 
 ###  Coming Soon
-- Frontend UI (React or Vanilla JS + HTML)
-- Expanded DEX bot script using PumpSwap or Uniswap V2 clone
+- A resuable frontend template generator
+- Github Pages live demos
+- DEX bot repo (PumpSwap or Uniswap V2 clone)
+- More Beginner friendly Smart Contract Templates to come!
 
 ---
 
