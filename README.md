@@ -25,7 +25,6 @@ This repo contains my Solidity and ethers.js practice projects as part of my Web
 ## How to Use (Local Hardhat Setup)
 
 1. **Start Hardhat node** (in one terminal):
-```bash
 npx hardhat node
 2. **Deploy any Contract (in a second Terminal):
 npx hardhat run scripts/deployCounter.js --network localhost
