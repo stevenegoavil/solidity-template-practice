@@ -25,13 +25,13 @@ This repo contains my Solidity and ethers.js practice projects as part of my Web
 ## How to Use (Local Hardhat Setup)
 
 1. **Start Hardhat node** (in one terminal):
-npx hardhat node
+```npx hardhat node```
 2. **Deploy any Contract (in a second Terminal):
-npx hardhat run scripts/deployCounter.js --network localhost
-npx hardhat run scripts/deployTodoList.js --network localhost
-npx hardhat run scripts/deployWallet.js --network localhost
+```npx hardhat run scripts/deployCounter.js --network localhost```, 
+```npx hardhat run scripts/deployTodoList.js --network localhost```, 
+```npx hardhat run scripts/deployWallet.js --network localhost```
 3. **Update each frontend's app.js with the contract address from the delpoy step
-const contractAddress = "0x..."; // copy from deploy output
+```const contractAddress = "0x..."; // copy from deploy output```
 4. **Open the HTML file in browser(I used Live Sever extention to execute MetaMask)
 5. **Connect MetaMask to localhost: 8545 and interact: Success!
 ###  Tools Used
